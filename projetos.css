@@ -1,0 +1,226 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background: radial-gradient(circle at top, #0f172a, #020617);
+  color: #e5e7eb;
+  min-height: 100vh;
+}
+
+/* HEADER */
+.header {
+  padding: 24px 48px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.logo {
+  height: 42px; /* AUMENTA A LOGO AQUI SE QUISER MAIS */
+}
+
+.header h1 {
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+/* MAIN */
+.main {
+  padding: 40px 48px;
+}
+
+/* AÇÕES */
+.actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+#new-project {
+  background: #2563eb;
+  border: none;
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+#new-project:hover {
+  background: #1d4ed8;
+}
+
+.back {
+  color: #9ca3af;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.back:hover {
+  color: #fff;
+}
+
+/* GRID DE PROJETOS */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 24px;
+}
+
+/* PLACEHOLDER */
+.placeholder {
+  color: #9ca3af;
+  font-style: italic;
+}
+
+/* CARD DE PROJETO (JS JÁ CRIA, ISSO SÓ EMBELEZA) */
+.project-card {
+  background: linear-gradient(180deg, #0b1220, #020617);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 14px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+/* TOPO DO CARD */
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.project-title {
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+/* STATUS */
+.project-status {
+  font-size: 0.75rem;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(37,99,235,0.15);
+  color: #60a5fa;
+}
+
+/* SELECT */
+.project-select {
+  background: #020617;
+  border: 1px solid rgba(255,255,255,0.08);
+  color: #e5e7eb;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+/* DESCRIÇÃO */
+.project-description {
+  width: 100%;
+  min-height: 80px;
+  background: #020617;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 8px;
+  padding: 10px;
+  color: #e5e7eb;
+  resize: vertical;
+}
+
+/* BOTÃO SALVAR */
+.save-btn {
+  align-self: flex-end;
+  background: #16a34a;
+  border: none;
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.save-btn:hover {
+  background: #15803d;
+}
+/* === CORREÇÃO HARDCORE DO LAYOUT === */
+
+/* qualquer div direta dentro do container vira card */
+#projects-container > div {
+  background: linear-gradient(180deg, #0b1220, #020617);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 16px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 320px;
+}
+
+/* nome do projeto */
+#projects-container h3,
+#projects-container strong {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+/* textarea */
+#projects-container textarea {
+  width: 100%;
+  min-height: 90px;
+  background: #020617;
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 8px;
+  padding: 10px;
+  color: #e5e7eb;
+  resize: vertical;
+}
+
+/* select */
+#projects-container select {
+  width: 100%;
+  background: #020617;
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 8px;
+  padding: 8px;
+  color: #e5e7eb;
+}
+
+/* botão salvar */
+#projects-container button {
+  align-self: flex-end;
+  margin-top: 6px;
+  background: #2563eb;
+  border: none;
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#projects-container button:hover {
+  background: #1d4ed8;
+}
+.main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 24px;
+}
+
+.projects-grid {
+  margin-top: 20px;
+}
